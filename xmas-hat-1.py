@@ -19,4 +19,4 @@ while True:
         else: 
             rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=0.1)
     rainbowhat.rainbow.show()
-    time.sleep(1
+    time.sleep(1)
