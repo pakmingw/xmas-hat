@@ -27,3 +27,4 @@ while True:
                 rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=0.2)
     rainbowhat.rainbow.show()
     time.sleep(1)
+    isFlip = not(isFlip)
