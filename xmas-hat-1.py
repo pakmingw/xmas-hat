@@ -5,10 +5,7 @@ import time
 
 import rainbowhat
 
-print("""Rainbow HAT Christmas Edition
-
-Press Control+C to quit.
-""")
+print("Rainbow HAT Christmas Edition:  Press Control+C to quit.")
 
 # Merry Christmas
 
