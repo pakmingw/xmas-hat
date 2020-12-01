@@ -13,7 +13,6 @@ Press Control+C to quit.
 # Merry Christmas
 
 while True:
-
     rainbowhat.display.print_str("XMAS")
     rainbowhat.display.show()
     time.sleep(1.0)
