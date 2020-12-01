@@ -21,7 +21,7 @@ while True:
             else: 
                 rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=0.1)
         else:
-                if x % 2 == 1:
+            if x % 2 == 1:
                 rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=0.2)
             else: 
                 rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=0.2)
