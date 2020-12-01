@@ -8,9 +8,16 @@ import rainbowhat
 print("Rainbow HAT Christmas Edition:  Press Control+C to quit.")
 
 # Merry Christmas
+rainbowhat.display.print_str("XMAS")
+rainbowhat.display.show()
 
 while True:
-    rainbowhat.display.print_str("XMAS")
-    rainbowhat.display.show()
-    time.sleep(1.0)
+    for x in range(7):
+        # red 
+        if x % 2 == 1:
+            rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=0.1)
+            time.sleep(0.5)
+        else: 
+            rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=0.1)
+            time.sleep(0.5)
 
