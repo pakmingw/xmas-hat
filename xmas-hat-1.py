@@ -10,9 +10,8 @@ print("Rainbow HAT Christmas Edition:  Press Control+C to quit.")
 # Merry Christmas
 rainbowhat.display.print_str("XMAS")
 rainbowhat.display.show()
-
+isFlip = True
 while True:
-    isFlip = True
     for x in range(7):
         # red 
         if isFlip: 
