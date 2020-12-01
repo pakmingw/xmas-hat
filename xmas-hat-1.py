@@ -16,8 +16,7 @@ while True:
         # red 
         if x % 2 == 1:
             rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=0.1)
-            time.sleep(0.5)
         else: 
             rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=0.1)
-            time.sleep(0.5)
-
+    rainbowhat.rainbow.show()
+    time.sleep(1
