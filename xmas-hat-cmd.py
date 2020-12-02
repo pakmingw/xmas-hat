@@ -27,7 +27,7 @@ if (len(sys.argv) == 5):
         PWM values are low assuming that you are connecting without a resistor.
         see https://cs.stanford.edu/people/nick/led-without-resistor/
         """)
-        print('hat_brightness: {0:2d}'.format(hat_brightness))
+        print('hat_brightness: {0:2f}'.format(hat_brightness))
         print('pwm_bright: {0:2d}'.format(pwm_bright))
         print('pwm_dim: {0:2d}'.format(pwm_dim))
         print('cycle_time: {0:2d}'.format(cycle_time))
