@@ -20,7 +20,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(led_pin, GPIO.OUT)
 
 # Code constants
-BRIGHTNESS_VAL = 0.3
+BRIGHTNESS_VAL = 0.4
 PWM_BRIGHT = 90
 PWM_DIM = 30
 
@@ -52,7 +52,3 @@ while True:
 
     time.sleep(1)
     isFlip = not(isFlip)
-
-# Never gets here : Stop, cleanup, and exit
-pwm.stop()
-GPIO.cleanup()
