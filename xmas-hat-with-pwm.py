@@ -21,6 +21,8 @@ GPIO.setup(led_pin, GPIO.OUT)
 
 # Code constants
 BRIGHTNESS_VAL = 0.4
+# drive leds without resistor
+# see https://cs.stanford.edu/people/nick/led-without-resistor/
 PWM_BRIGHT = 5
 PWM_DIM = 1
 
