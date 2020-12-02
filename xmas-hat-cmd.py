@@ -7,17 +7,30 @@ import rainbowhat
 import RPi.GPIO as GPIO
 
 # input check
-if (len(sys.argv) != 4) and (sys.argv[1] > 1.0 or sys.argv[2] > 10 or sys.argv[3] > 10):
-    print("""Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time timing
-    - hat_brightness: Value between 0.0 and 1.0, recommend 0.4
-    - pwm_bright: Bright value for led lights, recommend 5, or 5 percent of duty cycle
-    - pwm_dim: Dim value for led lights, recommend 1, or 1 percent of duty cycle
-    - cycle_time: Cycle time in seconds, recommend 1
+if (len(sys.argv) != 4):
+    if (sys.argv[1] > 1.0 or sys.argv[2] > 10 or sys.argv[3] > 10):
+        print("""Error: Values are dangerous! See recommendations below.
+        Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time timing
+        - hat_brightness: Value between 0.0 and 1.0, recommend 0.4
+        - pwm_bright: Bright value for led lights, recommend 5, or 5 percent of duty cycle
+        - pwm_dim: Dim value for led lights, recommend 1, or 1 percent of duty cycle
+        - cycle_time: Cycle time in seconds, recommend 1
 
-    PWM values are low assuming that you are connecting without a resistor.
-    # see https://cs.stanford.edu/people/nick/led-without-resistor/
+        PWM values are low assuming that you are connecting without a resistor.
+        # see https://cs.stanford.edu/people/nick/led-without-resistor/
 
-    Press Control+C to quit.""")
+        Press Control+C to quit.""")
+    else:
+        print("""Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time timing
+        - hat_brightness: Value between 0.0 and 1.0, recommend 0.4
+        - pwm_bright: Bright value for led lights, recommend 5, or 5 percent of duty cycle
+        - pwm_dim: Dim value for led lights, recommend 1, or 1 percent of duty cycle
+        - cycle_time: Cycle time in seconds, recommend 1
+
+        PWM values are low assuming that you are connecting without a resistor.
+        # see https://cs.stanford.edu/people/nick/led-without-resistor/
+
+        Press Control+C to quit.""")
 else:
     # Merry Christmas
 
