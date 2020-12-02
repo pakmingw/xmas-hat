@@ -6,11 +6,9 @@ import sys
 import rainbowhat
 import RPi.GPIO as GPIO
 
-print('Number of arguments:' + len(sys.argv) + 'arguments.\n')
-print('Argument List:' +  str(sys.argv) + '\n')
 
 # input check
-if (len(sys.argv) != 4):
+if (len(sys.argv) == 4):
     if (sys.argv[1] > 1.0 or sys.argv[2] > 10 or sys.argv[3] > 10):
         print("""Error: Values are dangerous! See recommendations below.
         Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time timing
@@ -20,7 +18,7 @@ if (len(sys.argv) != 4):
         - cycle_time: Cycle time in seconds, recommend 1
 
         PWM values are low assuming that you are connecting without a resistor.
-        # see https://cs.stanford.edu/people/nick/led-without-resistor/
+        see https://cs.stanford.edu/people/nick/led-without-resistor/
 
         Press Control+C to quit.""")
     else:
@@ -31,7 +29,7 @@ if (len(sys.argv) != 4):
         - cycle_time: Cycle time in seconds, recommend 1
 
         PWM values are low assuming that you are connecting without a resistor.
-        # see https://cs.stanford.edu/people/nick/led-without-resistor/
+        see https://cs.stanford.edu/people/nick/led-without-resistor/
 
         Press Control+C to quit.""")
 else:
