@@ -45,13 +45,6 @@ if (len(sys.argv) == 5):
         # Set LED pin as output
         GPIO.setup(led_pin, GPIO.OUT)
 
-        # Code constants
-        hat_brightness = sys.argv[1]
-        # drive leds without resistor
-        pwm_bright = sys.argv[2]
-        pwm_dim = sys.argv[3]
-        cycle_time = sys.argv[4]
-
         # initialise rainbow hat
         rainbowhat.display.print_str("XMAS")
         rainbowhat.display.show()
