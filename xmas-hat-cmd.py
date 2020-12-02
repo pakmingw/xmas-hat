@@ -9,6 +9,13 @@ import RPi.GPIO as GPIO
 
 # input check
 if (len(sys.argv) == 5):
+    # hat brightness
+    hat_brightness = sys.argv[1]
+    # drive leds without resistor
+    pwm_bright = sys.argv[2]
+    pwm_dim = sys.argv[3]
+    cycle_time = sys.argv[4]
+
     if (sys.argv[1] > 1.0 or sys.argv[2] > 10 or sys.argv[3] > 10):
         print("""Error: Values are dangerous! See recommendations below.
         Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time
@@ -19,8 +26,11 @@ if (len(sys.argv) == 5):
 
         PWM values are low assuming that you are connecting without a resistor.
         see https://cs.stanford.edu/people/nick/led-without-resistor/
-
-        Press Control+C to quit.""")
+        """)
+        print('hat_brightness: {0:2d}'.format(hat_brightness))
+        print('pwm_bright: {0:2d}'.format(pwm_bright))
+        print('pwm_dim: {0:2d}'.format(pwm_dim))
+        print('cycle_time: {0:2d}'.format(cycle_time))
     else:
         print("""Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time
         Starting. Press Control+C to quit.""")
