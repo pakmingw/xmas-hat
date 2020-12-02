@@ -8,7 +8,7 @@ import RPi.GPIO as GPIO
 
 
 # input check
-if (len(sys.argv) == 4):
+if (len(sys.argv) == 5):
     if (sys.argv[1] > 1.0 or sys.argv[2] > 10 or sys.argv[3] > 10):
         print("""Error: Values are dangerous! See recommendations below.
         Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time
