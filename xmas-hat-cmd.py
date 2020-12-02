@@ -14,7 +14,7 @@ if (len(sys.argv) == 5):
     # drive leds without resistor
     pwm_bright = int(sys.argv[2])
     pwm_dim = int(sys.argv[3])
-    cycle_time = int(sys.argv[4])
+    cycle_time = float(sys.argv[4])
 
     if hat_brightness > 1.0 or pwm_bright > 10 or pwm_dim > 10:
         print("""Error: Values are dangerous! See recommendations below.
@@ -30,7 +30,7 @@ if (len(sys.argv) == 5):
         print('hat_brightness: {0:2f}'.format(hat_brightness))
         print('pwm_bright: {0:2d}'.format(pwm_bright))
         print('pwm_dim: {0:2d}'.format(pwm_dim))
-        print('cycle_time: {0:2d}'.format(cycle_time))
+        print('cycle_time: {0:2f}'.format(cycle_time))
     else:
         print("""Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time
         Starting. Press Control+C to quit.""")
