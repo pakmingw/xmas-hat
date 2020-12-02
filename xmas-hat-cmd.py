@@ -56,22 +56,27 @@ if (len(sys.argv) == 5):
             for x in range(7):
                 # red 
                 if isFlip: 
+                    # set rainbow
                     if x % 2 == 1:
                         rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=hat_brightness)
                     else: 
                         rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=hat_brightness)
+                    rainbowhat.rainbow.show()
                     # set lights
                     pwm.ChangeDutyCycle(pwm_bright)
                     # set text
                     rainbowhat.display.print_str("XMAS")
                     rainbowhat.display.show()
                 else:
+                    # set rainbow
                     if x % 2 == 0:
                         rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=hat_brightness)
                     else: 
                         rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=hat_brightness)
-                    pwm.ChangeDutyCycle(pwm_dim)
                     rainbowhat.rainbow.show()
+                    # set lights
+                    pwm.ChangeDutyCycle(pwm_dim)
+                    # set text
                     rainbowhat.display.print_str("NOEL")
                     rainbowhat.display.show()                                             
             time.sleep(cycle_time)
