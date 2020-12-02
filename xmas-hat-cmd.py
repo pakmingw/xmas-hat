@@ -6,8 +6,8 @@ import sys
 import rainbowhat
 import RPi.GPIO as GPIO
 
-print('Number of arguments:', len(sys.argv), 'arguments.\n')
-print('Argument List:', str(sys.argv), '\n')
+print('Number of arguments:' + len(sys.argv) + 'arguments.\n')
+print('Argument List:' +  str(sys.argv) + '\n')
 
 # input check
 if (len(sys.argv) != 4):
