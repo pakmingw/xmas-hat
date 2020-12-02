@@ -10,11 +10,11 @@ import RPi.GPIO as GPIO
 # input check
 if (len(sys.argv) == 5):
     # hat brightness
-    hat_brightness = sys.argv[1]
+    hat_brightness = float(sys.argv[1])
     # drive leds without resistor
-    pwm_bright = sys.argv[2]
-    pwm_dim = sys.argv[3]
-    cycle_time = sys.argv[4]
+    pwm_bright = int(sys.argv[2])
+    pwm_dim = int(sys.argv[3])
+    cycle_time = int(sys.argv[4])
 
     if (sys.argv[1] > 1.0 or sys.argv[2] > 10 or sys.argv[3] > 10):
         print("""Error: Values are dangerous! See recommendations below.
