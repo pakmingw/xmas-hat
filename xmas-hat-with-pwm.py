@@ -21,8 +21,8 @@ GPIO.setup(led_pin, GPIO.OUT)
 
 # Code constants
 BRIGHTNESS_VAL = 0.4
-PWM_BRIGHT = 90
-PWM_DIM = 30
+PWM_BRIGHT = 5
+PWM_DIM = 1
 
 # initialise rainbow hat
 rainbowhat.display.print_str("XMAS")
