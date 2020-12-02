@@ -46,8 +46,7 @@ if (len(sys.argv) == 5):
         GPIO.setup(led_pin, GPIO.OUT)
 
         # initialise rainbow hat
-        rainbowhat.display.print_str("XMAS")
-        rainbowhat.display.show()
+
         isFlip = True
         # Initialize pwm object with 50 Hz and 0% duty cycle
         pwm = GPIO.PWM(led_pin, 50)
@@ -63,14 +62,18 @@ if (len(sys.argv) == 5):
                         rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=hat_brightness)
                     # set lights
                     pwm.ChangeDutyCycle(pwm_bright)
+                    # set text
+                    rainbowhat.display.print_str("XMAS")
+                    rainbowhat.display.show()
                 else:
                     if x % 2 == 0:
                         rainbowhat.rainbow.set_pixel(6 - x, 0, 1, 0, brightness=hat_brightness)
                     else: 
                         rainbowhat.rainbow.set_pixel(6 - x, 1, 0, 0, brightness=hat_brightness)
                     pwm.ChangeDutyCycle(pwm_dim)
-            rainbowhat.rainbow.show()
-
+                    rainbowhat.rainbow.show()
+                    rainbowhat.display.print_str("NOEL")
+                    rainbowhat.display.show()                                             
             time.sleep(cycle_time)
             isFlip = not(isFlip)
 
