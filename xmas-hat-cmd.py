@@ -16,7 +16,7 @@ if (len(sys.argv) == 5):
     pwm_dim = int(sys.argv[3])
     cycle_time = float(sys.argv[4])
 
-    if hat_brightness > 1.0 or pwm_bright > 10 or pwm_dim > 10:
+    if hat_brightness > 1.0 or pwm_bright >= 10 or pwm_dim >= 10:
         print("""Error: Values are dangerous! See recommendations below.
         Rainbow HAT Christmas Edition:  python xmas-hat-cmd.py hat_brightness pwm_bright pwm_dim cycle_time
         - hat_brightness: Value between 0.0 and 1.0, recommend 0.4
